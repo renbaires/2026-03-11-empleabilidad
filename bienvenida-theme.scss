@@ -1,0 +1,305 @@
+/*-- scss:defaults --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+$font-family-sans-serif: "Inter", system-ui, sans-serif;
+$presentation-font-size-root: 34px;
+
+
+/* =================================================
+   COLORES
+================================================= */
+
+$bg-main: #0D0D1A;
+$text-main: #F0EEFF;
+
+$accent-pink: #FF3CAC;
+$accent-blue: #2B86C5;
+$accent-yellow: #FFD200;
+$accent-orange: #F7971E;
+
+$muted: #9B9BB8;
+
+
+
+/*-- scss:rules --*/
+
+.reveal {
+  font-family: $font-family-sans-serif;
+  color: $text-main;
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal .slides section {
+  padding: 1.2rem 1.6rem;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.reveal h2 {
+  font-size: 1.8em;
+  margin-bottom: 0.6em;
+}
+
+.reveal p {
+  line-height: 1.45;
+}
+
+/* fondo general de la presentación */
+
+.reveal {
+  background: #0D0D1A;
+  color: #F0EEFF;
+}
+.reveal .quarto-title-block .title {
+  color: $accent-pink;
+}
+
+.reveal h1 {
+  color: $accent-pink;
+}
+
+/* =================================================
+   DIVIDER
+================================================= */
+
+.divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, $accent-pink, $accent-yellow);
+  margin: 0.8rem 0 1rem 0;
+  border-radius: 2px;
+}
+
+
+/* =================================================
+   TITLE SLIDE
+================================================= */
+
+.title-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  min-height: 60%;
+}
+
+.title-heading {
+  font-size: 2em;
+}
+
+.title-sub {
+  color: $muted;
+  font-size: 0.9em;
+  margin-top: 0.4rem;
+}
+
+.title-tag {
+  font-size: 0.6em;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: $accent-pink;
+  margin-bottom: 0.8rem;
+}
+
+
+/* =================================================
+   COLUMNS
+================================================= */
+
+.columns-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.columns-layout-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  align-items: start;
+}
+
+
+/* =================================================
+   CARDS
+================================================= */
+
+.card {
+  background: rgba(255,255,255,0.03);
+  padding: 1.1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(4px);
+}
+
+.big-number {
+  font-size: 2.2em;
+  font-weight: 800;
+  color: $accent-pink;
+  margin-bottom: 0.2rem;
+}
+.reveal .title {
+  color: #FF3CAC;
+}
+
+/* =================================================
+   CHIPS
+================================================= */
+
+.chip {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 20px;
+  font-size: 0.55em;
+  background: rgba(255,255,255,0.08);
+  margin-right: 0.3rem;
+}
+
+.chip-blue {
+  background: rgba(43,134,197,0.25);
+}
+
+.chip-yellow {
+  background: rgba(255,210,0,0.25);
+}
+
+
+/* =================================================
+   SPEAKERS
+================================================= */
+
+.speakers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 1.2rem;
+}
+
+.speaker-card {
+  text-align: center;
+}
+
+.speaker-photo-placeholder {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+}
+
+.speaker-name {
+  font-weight: 700;
+  margin-top: 0.4rem;
+}
+
+.speaker-bio {
+  font-size: 0.6em;
+  color: $muted;
+}
+
+
+/* =================================================
+   ORGANIZERS
+================================================= */
+
+.org-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.org-card {
+  text-align: center;
+  width: 120px;
+}
+
+.org-photo-placeholder {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.org-name {
+  font-size: 0.7em;
+  margin-top: 0.4rem;
+}
+
+.org-role {
+  font-size: 0.55em;
+  color: $muted;
+}
+
+
+/* =================================================
+   LOGOS
+================================================= */
+
+.org-logo {
+  width: 90px;
+  margin-bottom: 1rem;
+}
+
+.org-logo-footer {
+  width: 60px;
+  opacity: 0.8;
+}
+
+
+/* =================================================
+   ANIMATIONS
+================================================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal .slides section.present {
+  animation: fadeUp 0.4s ease both;
+}
+
+
+/* =================================================
+   MOBILE / SMALL SCREEN
+================================================= */
+
+@media (max-width: 900px) {
+
+  .columns-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .columns-layout-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .speakers-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
