@@ -225,7 +225,7 @@ Speaker y asesora de empleabilidad
 
 ::: {.speaker-card}
 ::: {.speaker-photo-placeholder"}
-![](emplea.jpg){width="50%" style="border-radius: 100%;"}
+![](emplea.jpg)
 :::
 
 
